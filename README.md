@@ -43,7 +43,6 @@ But you can host this on any static hosting platoform. <br> <br>
 [![NO LONGER AVALIVLE](https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg)](https://app.cyclic.sh/api/app/deploy/tf7software/UV-Static/)
 
 <br><br>
-## License
 
 
 ## Credits

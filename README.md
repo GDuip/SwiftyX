@@ -24,7 +24,6 @@ Modified Version of the <a href="https://github.com/titaniumnetwork-dev/Ultravio
 <br><br>
 
 
-## Host your own!
 
 UV-Static recommends using either:
 <br>

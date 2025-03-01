@@ -24,7 +24,7 @@ Modified Version of the <a href="https://github.com/titaniumnetwork-dev/Ultravio
 <br><br>
 
 
-
+## Host Your Own
 UV-Static recommends using either:
 <br>
 <br>
@@ -41,7 +41,6 @@ But you can host this on any static hosting platoform. <br> <br>
 [![Deploy to Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/tf7software/UV-Static/)
 [![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/tf7software/UV-Static/&branch=Main&name=)
 [![NO LONGER AVALIVLE](https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg)](https://app.cyclic.sh/api/app/deploy/tf7software/UV-Static/)
-## Contributing
 
 <br><br>
 ## License

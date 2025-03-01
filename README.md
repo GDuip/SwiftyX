@@ -1,16 +1,14 @@
-# tf7software UV-Static
-### This is the upkept version of UV-Static, originally by [titaniumnetwork](https://github.com/titaniumnetwork-dev/Ultraviolet), and made static by [TIW](https://github.com/TheTIW/UV-Static)
+# SwiftyX
+### This is a website using UV-Static by tf7software, originally by [titaniumnetwork](https://github.com/titaniumnetwork-dev/Ultraviolet), and made static by [TIW](https://github.com/TheTIW/UV-Static)
 
-[![Join Our Discord](https://img.shields.io/badge/Join%20Our-Discord-purple)](https://discord.gg/Ex2nZUWuHF) [![maintenance-status](https://img.shields.io/badge/maintenance-actively--developed-brightgreen.svg)](https://github.com/tf7software/UV-Static/commits/main/)
-
-
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Introducing+SwiftyX!;Full+Built+In+Proxy!;Very+Fast!;Built+Off+Of+UV-Static)](https://git.io/typing-svg)
 
 
 
-[TIW Discord](https://discord.com/invite/XctyeqGGt4)
 
 
-Modified Version of the <a href="https://github.com/titaniumnetwork-dev/Ultraviolet-App" target="blank">Ultraviolet</a> backend. This modification changes the proxy **CONFIG**, making it work on static pages. 
+
+Modified Version of the <a href="https://github.com/titaniumnetwork-dev/Ultraviolet-App" target="blank">Ultraviolet</a> backend. This modification changes the proxy **CONFIG**, making it work on static pages such as SwiftyX. 
 
 
 </center> <br>

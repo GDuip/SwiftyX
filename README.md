@@ -17,7 +17,10 @@ Modified Version of the <a href="https://github.com/titaniumnetwork-dev/Ultravio
 
 - Search the web using a static proxy.
 - Access to most websites
-- Deployable on any static hosting platform
+- Cool design!
+- Working proxy!
+- Gets updated a lot!
+- Tons Of links!
 <br><br>
 
 ## Why do you redirect to /active?

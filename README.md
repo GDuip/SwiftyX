@@ -24,9 +24,9 @@ Modified Version of the <a href="https://github.com/titaniumnetwork-dev/Ultravio
 <br><br>
 
 
-## Hosting
+## Host your own!
 
-We recommend using either:
+UV-Static recommends using either:
 <br>
 <br>
 [![Deploy to Netlify](https://binbashbanana.github.io/deploy-buttons/buttons/remade/netlify.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tf7software/UV-Static/)    ___or___    [![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/tf7software/UV-Static/)
@@ -41,19 +41,13 @@ But you can host this on any static hosting platoform. <br> <br>
 [![Deploy on Railway](https://binbashbanana.github.io/deploy-buttons/buttons/remade/railway.svg)](https://railway.app/new/template?template=https://github.com/tf7software/UV-Static/)
 [![Deploy to Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/tf7software/UV-Static/)
 [![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/tf7software/UV-Static/&branch=Main&name=)
-[![Deploy to Cyclic](https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg)](https://app.cyclic.sh/api/app/deploy/tf7software/UV-Static/)
+[![NO LONGER AVALIVLE](https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg)](https://app.cyclic.sh/api/app/deploy/tf7software/UV-Static/)
 ## Contributing
 
-Contributions are welcome! If you have any suggestions or improvements, please create a pull request.
 <br><br>
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
 
-## Other Contributors:
-[KwazyMotoo](https://github.com/KwazyMotoo)
-<br>
-[NCCoder](https://github.com/NCCoder)
-
-### Disclamer
-We take no credit for the making of UV. Ultraviolet is made by Titanium Network, and therefore isn't ours. This is just a modification built to it to make it static, allowing you to deploy it on simple hosting platofrms like vercel, netlify, onrender static, and etc. You are welcome to edit files to your need, just credit TIW-UV-Static ;)
+## Credits
+- [UV-Static](https://github.com/TheTIW/UV-Static) - The Forked Rep!
+- [OG Proxy Creators](https://github.com/titaniumnetwork-dev/Ultraviolet) - UV!

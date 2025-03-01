@@ -23,18 +23,6 @@ Modified Version of the <a href="https://github.com/titaniumnetwork-dev/Ultravio
 - Tons Of links!
 <br><br>
 
-## Why do you redirect to /active?
-So whenever you deploy this site, you don't HAVE to deploy it at root. Just drag and drop the ```active``` folder into the root of your main website, and your good to go!
-
-## Deployment
-
-To deploy this website locally, follow these steps:
-
-1. Clone the repository: ```https://github.com/tf7software/UV-Static.git```
-3. Navigate to the project directory: `cd UV-Static`
-4. Run `index.html` using ```python3 -m http.server 3000``` or your server of choice.
-5. Navigate to [localhost with port 3000](http://localhost:3000/)
-<br><br>
 
 ## Hosting
 

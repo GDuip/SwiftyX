@@ -1,3 +1,4 @@
+// Do not edit unless you know what your doing
 importScripts('/active/uv/uv.bundle.js');
 importScripts('/active/uv/uv.config.js');
 
@@ -348,15 +349,12 @@ function EventEmitter() {
   EventEmitter.init.call(this);
 }
 
-// Backwards-compat with node 0.10.x
 EventEmitter.EventEmitter = EventEmitter;
 
 EventEmitter.prototype._events = undefined;
 EventEmitter.prototype._eventsCount = 0;
 EventEmitter.prototype._maxListeners = undefined;
 
-// By default EventEmitters will print a warning if more than 10 listeners are
-// added to it. This is a useful default which helps finding memory leaks.
 var defaultMaxListeners = 10;
 
 function checkListener(listener) {
@@ -389,8 +387,6 @@ EventEmitter.init = function() {
   this._maxListeners = this._maxListeners || undefined;
 };
 
-// Obviously not all Emitters should be limited to 10. This function allows
-// that to be increased. Set to zero for unlimited.
 EventEmitter.prototype.setMaxListeners = function setMaxListeners(n) {
   if (typeof n !== 'number' || n < 0 || NumberIsNaN(n)) {
     throw new RangeError('The value of "n" is out of range. It must be a non-negative number. Received ' + n + '.');
@@ -420,20 +416,17 @@ EventEmitter.prototype.emit = function emit(type) {
   else if (!doError)
     return false;
 
-  // If there is no 'error' event listener then throw.
   if (doError) {
     var er;
     if (args.length > 0)
       er = args[0];
     if (er instanceof Error) {
-      // Note: The comments on the `throw` lines are intentional, they show
-      // up in Node's output if this results in an unhandled exception.
-      throw er; // Unhandled 'error' event
+
+      throw er; 
     }
-    // At least give some kind of context to the user
     var err = new Error('Unhandled error.' + (er ? ' (' + er.message + ')' : ''));
     err.context = er;
-    throw err; // Unhandled 'error' event
+    throw err;
   }
 
   var handler = events[type];
@@ -465,41 +458,38 @@ function _addListener(target, type, listener, prepend) {
     events = target._events = Object.create(null);
     target._eventsCount = 0;
   } else {
-    // To avoid recursion in the case that type === "newListener"! Before
-    // adding it to the listeners, first emit "newListener".
+
     if (events.newListener !== undefined) {
       target.emit('newListener', type,
                   listener.listener ? listener.listener : listener);
 
-      // Re-assign `events` because a newListener handler could have caused the
-      // this._events to be assigned to a new object
+
       events = target._events;
     }
     existing = events[type];
   }
 
   if (existing === undefined) {
-    // Optimize the case of one listener. Don't need the extra array object.
+
     existing = events[type] = listener;
     ++target._eventsCount;
   } else {
     if (typeof existing === 'function') {
-      // Adding the second element, need to change to array.
+
       existing = events[type] =
         prepend ? [listener, existing] : [existing, listener];
-      // If we've already got an array, just append.
+
     } else if (prepend) {
       existing.unshift(listener);
     } else {
       existing.push(listener);
     }
 
-    // Check for listener leak
+
     m = _getMaxListeners(target);
     if (m > 0 && existing.length > m && !existing.warned) {
       existing.warned = true;
-      // No error code for this since it is a Warning
-      // eslint-disable-next-line no-restricted-syntax
+
       var w = new Error('Possible EventEmitter memory leak detected. ' +
                           existing.length + ' ' + String(type) + ' listeners ' +
                           'added. Use emitter.setMaxListeners() to ' +
@@ -557,7 +547,6 @@ EventEmitter.prototype.prependOnceListener =
       return this;
     };
 
-// Emits a 'removeListener' event if and only if the listener was removed.
 EventEmitter.prototype.removeListener =
     function removeListener(type, listener) {
       var list, events, position, i, originalListener;
@@ -620,7 +609,6 @@ EventEmitter.prototype.removeAllListeners =
       if (events === undefined)
         return this;
 
-      // not listening for removeListener, no need to emit
       if (events.removeListener === undefined) {
         if (arguments.length === 0) {
           this._events = Object.create(null);
@@ -634,7 +622,6 @@ EventEmitter.prototype.removeAllListeners =
         return this;
       }
 
-      // emit removeListener for all listeners on all events
       if (arguments.length === 0) {
         var keys = Object.keys(events);
         var key;
@@ -654,7 +641,7 @@ EventEmitter.prototype.removeAllListeners =
       if (typeof listeners === 'function') {
         this.removeListener(type, listeners);
       } else if (listeners !== undefined) {
-        // LIFO order
+
         for (i = listeners.length - 1; i >= 0; i--) {
           this.removeListener(type, listeners[i]);
         }
@@ -773,11 +760,9 @@ function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
       emitter.on(name, listener);
     }
   } else if (typeof emitter.addEventListener === 'function') {
-    // EventTarget does not have `error` event semantics like Node
-    // EventEmitters, we do not listen for `error` events here.
+
     emitter.addEventListener(name, function wrapListener(arg) {
-      // IE does not have builtin `{ once: true }` support so we
-      // have to do it manually.
+
       if (flags.once) {
         emitter.removeEventListener(name, wrapListener);
       }

@@ -1,26 +1,16 @@
+// Do not edit unless you know what your doing
 "use strict";
-/**
- * @type {HTMLFormElement}
- */
+
 const form = document.getElementById("uv-form");
-/**
- * @type {HTMLInputElement}
- */
+
 const address = document.getElementById("uv-address");
-/**
- * @type {HTMLInputElement}
- */
+
 const searchEngine = document.getElementById("uv-search-engine");
-/**
- * @type {HTMLParagraphElement}
- */
+
 const error = document.getElementById("uv-error");
-/**
- * @type {HTMLPreElement}
- */
+
 const errorCode = document.getElementById("uv-error-code");
 
-// Attach form submit event listener
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -36,8 +26,7 @@ form.addEventListener("submit", async (event) => {
   location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
 });
 
-// Autofill function with auto-submit
 function autofill(url) {
   address.value = url;
-  form.requestSubmit(); // Automatically submit the form
+  form.requestSubmit();
 }

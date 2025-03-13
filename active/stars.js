@@ -1,5 +1,4 @@
-// Stars and Meteors Animation Code
-
+// Stars Script
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -50,22 +49,22 @@ function getRandomStartPoint() {
         case 0: // top
             x = offsetX;
             y = 0;
-            angle = Math.random() * 90 + 45; // Random angle between 45 and 135
+            angle = Math.random() * 90 + 45; 
             break;
         case 1: // right
             x = canvas.width;
             y = offsetY;
-            angle = Math.random() * 90 + 135; // Random angle between 135 and 225
+            angle = Math.random() * 90 + 135; 
             break;
         case 2: // bottom
             x = offsetX;
             y = canvas.height;
-            angle = Math.random() * 90 + 225; // Random angle between 225 and 315
+            angle = Math.random() * 90 + 225; 
             break;
         case 3: // left
             x = 0;
             y = offsetY;
-            angle = Math.random() * 90 + 315; // Random angle between 315 and 405
+            angle = Math.random() * 90 + 315; 
             break;
         default:
             x = 0;
@@ -82,7 +81,7 @@ function createMeteor() {
         x: x,
         y: y,
         speed: speed,
-        angle: angle * (Math.PI / 180), // Convert degrees to radians
+        angle: angle * (Math.PI / 180), 
         distance: 0,
         scale: 1,
         id: Date.now()
@@ -97,7 +96,6 @@ function drawMeteors() {
         meteor.distance += meteor.speed;
         meteor.scale = 1 + meteor.distance / 100;
 
-        // Remove meteor if it's off-screen
         if (
             meteor.x < -50 ||
             meteor.x > canvas.width + 50 ||
@@ -108,16 +106,12 @@ function drawMeteors() {
             return;
         }
 
-        // Save context
         ctx.save();
 
-        // Move to meteor's position
         ctx.translate(meteor.x, meteor.y);
 
-        // Rotate context
         ctx.rotate(meteor.angle);
 
-        // Create gradient
         const width = starWidth * meteor.scale;
         const height = starHeight;
 
@@ -127,10 +121,8 @@ function drawMeteors() {
 
         ctx.fillStyle = gradient;
 
-        // Draw rectangle (meteor trail)
         ctx.fillRect(0, -height / 2, width, height);
 
-        // Restore context
         ctx.restore();
     });
 }
@@ -151,7 +143,6 @@ function scheduleMeteor() {
 }
 
 function hexToRgb(hex) {
-    // Convert hex color code to RGB values
     let bigint = parseInt(hex.replace("#", ""), 16);
     let r = (bigint >> 16) & 255;
     let g = (bigint >> 8) & 255;
@@ -164,7 +155,6 @@ window.addEventListener('resize', () => {
     canvas.height = window.innerHeight;
 });
 
-// Start the stars and meteors animation
 createStars();
 animate();
 scheduleMeteor();

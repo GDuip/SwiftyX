@@ -1,3 +1,4 @@
+// Do not change unless you know what your doing
 importScripts("/active/uv/uv.sw.js");
 
 const sw = new UVServiceWorker();

@@ -1,3 +1,4 @@
+// Search with URL Script
 "use strict";
 
 function search(input, template) {

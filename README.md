@@ -1,4 +1,4 @@
-# SwiftyX
+# SwiftX
 ### This is a website using UV-Static by tf7software, originally by [titaniumnetwork](https://github.com/titaniumnetwork-dev/Ultraviolet), and made static by [TIW](https://github.com/TheTIW/UV-Static)
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Introducing+SwiftyX!;Full+Built+In+Proxy!;Very+Fast!;Built+Off+Of+UV-Static)](https://git.io/typing-svg)

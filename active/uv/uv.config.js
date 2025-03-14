@@ -7,4 +7,5 @@ self.__uv$config = {
     bundle: '/active/uv/uv.bundle.js',
     config: '/active/uv/uv.config.js',
     sw: '/active/uv/uv.sw.js',
+    defaultSearchEngine: 'https://duckduckgo.com/?q='
 };

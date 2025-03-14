@@ -1,18 +1,21 @@
-// Search with URL Script
-"use strict";
+// Define the search engines
+const searchEngines = Object.freeze({
+    Google: 'google.com/search?q=',
+    Bing: 'bing.com/search?q=',
+    DuckDuckGo: 'duckduckgo.com/?q=',
+    Startpage: 'startpage.com/sp/search?query=',
+});
 
-function search(input, template) {
-  try {
-    return new URL(input).toString();
-  } catch (err) {
-  }
+// Set the default search engine
+const defaultSearch = searchEngines['DuckDuckGo'];
 
-  try {
-    const url = new URL(`http://https://duckduckgo.com/?q=${input}`);
-    if (url.hostname.includes(".")) return url.toString();
-  } catch (err) {
-  }
-
-
-  return template.replace("%s", encodeURIComponent(input));
-}
+// Function to handle search input
+const search = (input, template = `https://${defaultSearch}%s`) => {
+    try {
+        return new URL(input) + '';
+    } catch (e) {
+        const url = new URL(`http://${input}`);
+        if (url.hostname.indexOf('.') != -1) return url + '';
+        return template.replace('%s', encodeURIComponent(input));
+    }
+};

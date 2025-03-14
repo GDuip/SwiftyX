@@ -8,7 +8,7 @@ function search(input, template) {
   }
 
   try {
-    const url = new URL(`http://${input}`);
+    const url = new URL(`http://https://duckduckgo.com/?q=${input}`);
     if (url.hostname.includes(".")) return url.toString();
   } catch (err) {
   }

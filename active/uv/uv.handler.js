@@ -84,7 +84,6 @@ async function __uvHook(window, config = {}, bare = '/bare/') {
         __uv.dispatchEvent = window.EventTarget.prototype.dispatchEvent;
     };
 
-    // Storage wrappers
     client.nativeMethods.defineProperty(client.storage.storeProto, '__uv$storageObj', {
         get() {
             if (this === client.storage.sessionStorage) return __uv.sessionStorageObj;

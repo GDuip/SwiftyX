@@ -22,7 +22,7 @@ UV-Static recommends using either:
 <br>
 [![Deploy to Netlify](https://binbashbanana.github.io/deploy-buttons/buttons/remade/netlify.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tf7software/UV-Static/)    ___or___    [![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/tf7software/UV-Static/)
 
-But you can host this on any static hosting platoform such as... <br> <br>
+But you can host this on any static hosting platoforms such as... <br> <br>
 [![Deploy to Heroku](https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg)](https://heroku.com/deploy/?template=https://github.com/2348hi/SwiftyX/)
 [![Remix on Glitch](https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg)](https://glitch.com/edit/#!/import/github/2348hi/SwiftyX/)
 [![Deploy to Amplify Console](https://binbashbanana.github.io/deploy-buttons/buttons/remade/amplifyconsole.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/2348hi/SwiftyX/)

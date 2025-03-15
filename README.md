@@ -17,7 +17,7 @@
 
 
 ## Host Your Own
-UV-Static recommends using either:
+UV-Static & SwiftyX recommends using either:
 <br>
 <br>
 [![Deploy to Netlify](https://binbashbanana.github.io/deploy-buttons/buttons/remade/netlify.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tf7software/UV-Static/)    ___or___    [![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/tf7software/UV-Static/)

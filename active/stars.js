@@ -1,4 +1,5 @@
 // Stars Script
+
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -49,22 +50,22 @@ function getRandomStartPoint() {
         case 0: // top
             x = offsetX;
             y = 0;
-            angle = Math.random() * 90 + 45; 
+            angle = Math.random() * 90 + 45;
             break;
         case 1: // right
             x = canvas.width;
             y = offsetY;
-            angle = Math.random() * 90 + 135; 
+            angle = Math.random() * 90 + 135;
             break;
         case 2: // bottom
             x = offsetX;
             y = canvas.height;
-            angle = Math.random() * 90 + 225; 
+            angle = Math.random() * 90 + 225;
             break;
         case 3: // left
             x = 0;
             y = offsetY;
-            angle = Math.random() * 90 + 315; 
+            angle = Math.random() * 90 + 315;
             break;
         default:
             x = 0;
@@ -81,7 +82,7 @@ function createMeteor() {
         x: x,
         y: y,
         speed: speed,
-        angle: angle * (Math.PI / 180), 
+        angle: angle * (Math.PI / 180),
         distance: 0,
         scale: 1,
         id: Date.now()

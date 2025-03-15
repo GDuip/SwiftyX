@@ -5,14 +5,6 @@
 
 
 
-
-
-
-Modified Version of the <a href="https://github.com/titaniumnetwork-dev/Ultraviolet-App" target="blank">Ultraviolet</a> backend. This modification changes the proxy **CONFIG**, making it work on static pages such as SwiftyX. 
-
-
-</center> <br>
-
 ## Features
 
 - Search the web using a static proxy.

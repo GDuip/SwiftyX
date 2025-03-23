@@ -7,7 +7,7 @@
 
 ## Features
 
-- Search the web using a trusted proxy.
+- Search the web using a proxy.
 - Access to tons of websites
 - Awsome design!
 - Fast proxy!

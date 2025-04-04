@@ -37,8 +37,7 @@ form.addEventListener("submit", async (event) => {
   location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
 });
 
-// Autofill function with auto-submit
 function autofill(url) {
   address.value = url;
-  form.requestSubmit(); // Automatically submit the form
+  form.requestSubmit();
 }

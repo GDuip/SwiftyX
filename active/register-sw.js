@@ -1,11 +1,7 @@
 // Do not change unless you know what your doing
 "use strict";
-
 const stockSW = "/active/uv-sw.js";
-
-
 const swAllowedHostnames = ["localhost", "127.0.0.1"];
-
 async function registerSW() {
   if (
     location.protocol !== "https:" &&

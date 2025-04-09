@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8"> <!-- Added charset for good practice -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensured viewport meta is standard -->
     <title>SwiftyX</title>
 
     <!-- Favicon -->
@@ -22,30 +23,31 @@
 
 </head>
 <body>
-    <!-- Particle JS Container (needs to be in body) -->
+    <!-- Particle JS Container (Needs CSS for positioning/background) -->
     <div id="particles-js"></div>
 
-    <!-- Welcome Alert (Consider replacing with a less intrusive notification) -->
+    <!-- Welcome Alert (Commented out - consider UX implications) -->
+    <!--
     <script>
-        // alert("Welcome To Swifty [WIP] This is heavily modified version of UV-Static!");
-        // Commented out the alert - uncomment if needed, but consider UX implications.
+        alert("Welcome To Swifty [WIP] This is heavily modified version of UV-Static!");
     </script>
+    -->
 
     <!-- Main Content -->
     <div id="content">
         <p>Welcome to SwiftyX <a href="/active/index.html">Teacher Approved!</a></p> <!-- Ensure this link path is correct -->
 
         <!-- Search Form -->
-        <form id="uv-form" novalidate> <!-- Added novalidate to disable browser validation if using custom JS validation -->
+        <form id="uv-form" novalidate>
             <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/>
             <input id="uv-address" type="text" placeholder="Search Google or type a URL" class="form__input" autocomplete="off"/>
-            <!-- Consider adding a submit button for users who don't press Enter -->
-            <!-- <button type="submit" class="go-button">Go</button> -->
+            <!-- Optional: Add a submit button for better accessibility/UX -->
+            <!-- <button type="submit"><i class="fas fa-search"></i></button> -->
         </form>
 
         <!-- Popular Sites Quick Links -->
         <div id="popularSites">
-             <!-- Consider hosting these icons locally for better performance/reliability -->
+             <!-- Consider hosting icons locally or using CSS background images -->
              <img src="https://img.icons8.com/?size=100&id=T2CwYFr5ouk6&format=png&color=000000" alt="Xbox Cloud Gaming" onclick="autofill('https://xbox.com/play')">
              <img src="https://img.icons8.com/?size=100&id=48137&format=png&color=000000" alt="Now.gg" onclick="autofill('https://now.gg/')">
              <img src="https://img.icons8.com/?size=100&id=48166&format=png&color=000000" alt="Google" onclick="autofill('https://google.com')">
@@ -54,10 +56,11 @@
              <img src="https://img.icons8.com/?size=100&id=52539&format=png&color=000000" alt="GitHub" onclick="autofill('https://github.com')">
              <img src="https://img.icons8.com/?size=100&id=53013&format=png&color=000000" alt="Twitch" onclick="autofill('https://twitch.tv')">
              <img src="https://img.icons8.com/?size=100&id=kTuxVYRKeKEY&format=png&color=000000" alt="ChatGPT" onclick="autofill('https://chatgpt.com')">
+             <!-- Ensure the 'autofill' function is defined in search.js or index.js -->
         </div>
 
         <!-- Social/External Links -->
-        <div class="social-links"> <!-- Added a container for better styling/layout -->
+        <div class="social-links"> <!-- Added a container for styling -->
              <a href="https://discord.gg/Dybpe2uWfZ" target="_blank" aria-label="Join our Discord server"><i class="fa-brands fa-discord"></i></a>
              <a href="https://github.com/tf7software/UV-Static" target="_blank" aria-label="View source on GitHub"><i class="fa-brands fa-github"></i></a>
              <a href="https://lupinevault.com/TIW/" target="_blank" aria-label="Visit TIW Cloud"><i class="fa-solid fa-cloud"></i></a>
@@ -80,20 +83,25 @@
         </footer>
     </div>
 
-    <!-- Scripts -->
-    <!-- Particle JS Library -->
-    <script src="active/particles.js"></script> <!-- Make sure path is correct -->
-    
-    <!-- Star Background Effect (if different from particles.js) -->
-    <script src="stars.js"></script> <!-- Ensure this doesn't conflict with particles.js -->
+    <!-- ========= SCRIPTS ========= -->
+    <!-- Order can matter here, place libraries before scripts that use them -->
 
-    <!-- Ultraviolet Scripts -->
-    <script src="uv/uv.bundle.js" charset="UTF-8" defer></script>
-    <script src="uv/uv.config.js" charset="UTF-8" defer></script>
+    <!-- Particle JS Library (Make sure path is correct) -->
+    <script src="active/particles.js"></script>
+
+    <!-- Star Background Effect (Ensure this doesn't conflict with particles.js) -->
+    <script src="stars.js"></script>
+
+    <!-- Ultraviolet Core Files -->
+    <!-- uv.config.js needs to load before register-sw.js and index.js which use __uv$config -->
+    <script src="/active/uv/uv.config.js" charset="UTF-8"></script> <!-- Check Path - Moved earlier -->
+    <script src="/active/uv/uv.bundle.js" charset="UTF-8" defer></script> <!-- Check Path -->
+
+    <!-- Service Worker Registration (Needs uv.config.js loaded first) -->
     <script src="register-sw.js" charset="UTF-8" defer></script>
 
     <!-- App Logic Scripts -->
-    <script src="search.js" charset="UTF-8" defer></script> <!-- Contains search logic, form handling, autofill function -->
+    <script src="search.js" charset="UTF-8" defer></script> <!-- Contains search logic, form handling, autofill -->
     <script src="index.js" charset="UTF-8" defer></script> <!-- Contains general page logic, maybe particle init -->
 
 </body>

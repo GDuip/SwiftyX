@@ -1,66 +1,100 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>SwiftyX</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-      <link rel="stylesheet" href="index.css">
-      <link rel="icon" type="image/x-icon" href="fav.png">
-      
-      <link rel="shortcut icon" type="image/jpg" href="fav.png"/>
-      <style>
-         
-      <div id="particles-js"></div>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SwiftyX</title>
 
-      <script src="active/particles.js"></script>
-         <script src="active/search.js"></script>
-  </style>
-      
-      <link rel="stylesheet" href="../assets/font-awesome/css/all.css">
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-   </head>
-   <body>
-      <script>
-         alert("Welcome To Swifty [WIP] This is hevaily modifed version of UV-Static!");
-      </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="fav.png">
 
-                    <div id="content">
-         <p>Welcome to SwiftyX <a href="/active/index.html">Teacher Approved!</a></p>
+    <!-- Font Awesome (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-         <form id="uv-form">
-            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
-            <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input"/>
-          </form>
-           <div id="popularSites">
-                <img src="https://img.icons8.com/?size=100&id=T2CwYFr5ouk6&format=png&color=000000" alt="Xbox" onclick="autofill('http://xbox.com/play')">
-                <img src="https://img.icons8.com/?size=100&id=48137&format=png&color=000000" alt="Now.gg" onclick="autofill('https://now.gg/')">
-                <img src="https://img.icons8.com/?size=100&id=48166&format=png&color=000000" alt="Google" onclick="autofill('https://google.com')">
-                <img src="https://img.icons8.com/?size=100&id=92582&format=png&color=000000" alt="GeForce NOW" onclick="autofill('https://play.geforcenow.com/')">
-                <img src="https://img.icons8.com/?size=100&id=KeTtCQ_b-ZiV&format=png&color=000000" alt="TikTok" onclick="autofill('https://tiktok.com')">
-                <img src="https://img.icons8.com/?size=100&id=52539&format=png&color=000000" alt="GitHub" onclick="autofill('https://github.com')">
-                <img src="https://img.icons8.com/?size=100&id=53013&format=png&color=000000" alt="Twitch" onclick="autofill('https://twitch.tv')">
-               <img src="https://img.icons8.com/?size=100&id=kTuxVYRKeKEY&format=png&color=000000" alt="ChatGPT" onclick="autofill('https://chatgpt.com')">
-            </div>
-            <a href="https://discord.gg/Dybpe2uWfZ" target="_blank" class="fa-brands fa-discord"></a>
-            <a href="https://github.com/tf7software/UV-Static" target="_blank"class="fa-brands fa-github"></a>
-            <a href="https://lupinevault.com/TIW/" target="_blank"class="fa-solid fa-cloud"></a>
-          <div class="desc left-margin">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- jQuery (Consider updating to 3.x unless compatibility issues exist) -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+<body>
+    <!-- Particle JS Container (needs to be in body) -->
+    <div id="particles-js"></div>
+
+    <!-- Welcome Alert (Consider replacing with a less intrusive notification) -->
+    <script>
+        // alert("Welcome To Swifty [WIP] This is heavily modified version of UV-Static!");
+        // Commented out the alert - uncomment if needed, but consider UX implications.
+    </script>
+
+    <!-- Main Content -->
+    <div id="content">
+        <p>Welcome to SwiftyX <a href="/active/index.html">Teacher Approved!</a></p> <!-- Ensure this link path is correct -->
+
+        <!-- Search Form -->
+        <form id="uv-form" novalidate> <!-- Added novalidate to disable browser validation if using custom JS validation -->
+            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/>
+            <input id="uv-address" type="text" placeholder="Search Google or type a URL" class="form__input" autocomplete="off"/>
+            <!-- Consider adding a submit button for users who don't press Enter -->
+            <!-- <button type="submit" class="go-button">Go</button> -->
+        </form>
+
+        <!-- Popular Sites Quick Links -->
+        <div id="popularSites">
+             <!-- Consider hosting these icons locally for better performance/reliability -->
+             <img src="https://img.icons8.com/?size=100&id=T2CwYFr5ouk6&format=png&color=000000" alt="Xbox Cloud Gaming" onclick="autofill('https://xbox.com/play')">
+             <img src="https://img.icons8.com/?size=100&id=48137&format=png&color=000000" alt="Now.gg" onclick="autofill('https://now.gg/')">
+             <img src="https://img.icons8.com/?size=100&id=48166&format=png&color=000000" alt="Google" onclick="autofill('https://google.com')">
+             <img src="https://img.icons8.com/?size=100&id=92582&format=png&color=000000" alt="GeForce NOW" onclick="autofill('https://play.geforcenow.com/')">
+             <img src="https://img.icons8.com/?size=100&id=KeTtCQ_b-ZiV&format=png&color=000000" alt="TikTok" onclick="autofill('https://tiktok.com')">
+             <img src="https://img.icons8.com/?size=100&id=52539&format=png&color=000000" alt="GitHub" onclick="autofill('https://github.com')">
+             <img src="https://img.icons8.com/?size=100&id=53013&format=png&color=000000" alt="Twitch" onclick="autofill('https://twitch.tv')">
+             <img src="https://img.icons8.com/?size=100&id=kTuxVYRKeKEY&format=png&color=000000" alt="ChatGPT" onclick="autofill('https://chatgpt.com')">
+        </div>
+
+        <!-- Social/External Links -->
+        <div class="social-links"> <!-- Added a container for better styling/layout -->
+             <a href="https://discord.gg/Dybpe2uWfZ" target="_blank" aria-label="Join our Discord server"><i class="fa-brands fa-discord"></i></a>
+             <a href="https://github.com/tf7software/UV-Static" target="_blank" aria-label="View source on GitHub"><i class="fa-brands fa-github"></i></a>
+             <a href="https://lupinevault.com/TIW/" target="_blank" aria-label="Visit TIW Cloud"><i class="fa-solid fa-cloud"></i></a>
+        </div>
+
+         <!-- Error Display Area -->
+         <div class="desc left-margin">
             <p id="uv-error"></p>
             <pre id="uv-error-code"></pre>
-          </div>
-        
-      </div>
-      <script src="stars.js"></script>
-      
-      <script src="uv/uv.bundle.js" charset="UTF-8" defer></script>
-      <script src="uv/uv.config.js" charset="UTF-8" defer></script>
-      <script src="register-sw.js" charset="UTF-8" defer></script>
-      <script src="search.js" charset="UTF-8" defer></script>
-      <script src="index.js" charset="UTF-8" defer></script>
-      <div id="footer">
-         <footer>OG Creator, <a href="https://rhw.one/">rhw.one</a> - <a href="https://lupinevault.com/privacy-policy.html">Privacy Policy</a> - By Using Swifty you agree to use properly <a href="https://lupinevault.com/tos.html">Terms of Service</a></footer>
-      </div>
-   </body>
+         </div>
+
+    </div> <!-- End #content -->
+
+    <!-- Footer -->
+    <div id="footer">
+        <footer>
+            OG Creator, <a href="https://rhw.one/">rhw.one</a> -
+            <a href="https://lupinevault.com/privacy-policy.html">Privacy Policy</a> -
+            By Using Swifty you agree to use properly <a href="https://lupinevault.com/tos.html">Terms of Service</a>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Particle JS Library -->
+    <script src="active/particles.js"></script> <!-- Make sure path is correct -->
+    
+    <!-- Star Background Effect (if different from particles.js) -->
+    <script src="stars.js"></script> <!-- Ensure this doesn't conflict with particles.js -->
+
+    <!-- Ultraviolet Scripts -->
+    <script src="uv/uv.bundle.js" charset="UTF-8" defer></script>
+    <script src="uv/uv.config.js" charset="UTF-8" defer></script>
+    <script src="register-sw.js" charset="UTF-8" defer></script>
+
+    <!-- App Logic Scripts -->
+    <script src="search.js" charset="UTF-8" defer></script> <!-- Contains search logic, form handling, autofill function -->
+    <script src="index.js" charset="UTF-8" defer></script> <!-- Contains general page logic, maybe particle init -->
+
+</body>
 </html>
